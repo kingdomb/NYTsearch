@@ -1,8 +1,10 @@
-<<<<<<< HEAD
 $("button").on("click", function() {
-    var animal = $(this).attr("data-animal");
-    var queryURL = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=a357e4dc6ed94eccab93584c834596db" +
-      animal + "&api_key=dc6zaTOxFJmzC&limit=10";
+    event.preventDefault()
+    var searchTerm = $("#search-term").val();
+    var searchTerm = $("#num-records-select").val();
+    var searchTerm = $("#start-year").val();
+    var searchTerm = $("#end-year").val();
+    var queryURL = "https://newsapi.org/v2/everything?q=" + searchTerm + "&apiKey=a357e4dc6ed94eccab93584c834596db&limit=10";
 
     $.ajax({
       url: queryURL,
@@ -39,4 +41,4 @@ $("button").on("click", function() {
 
     });
   });
-=======
+
