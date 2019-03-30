@@ -1,6 +1,9 @@
 $("button").on("click", function() {
     event.preventDefault()
     var searchTerm = $("#search-term").val();
+    var searchTerm = $("#search-term").val();
+    var searchTerm = $("#search-term").val();
+    var searchTerm = $("#search-term").val();
     var queryURL = "https://newsapi.org/v2/everything?q=" + searchTerm + "&apiKey=a357e4dc6ed94eccab93584c834596db&limit=10";
 
     $.ajax({
