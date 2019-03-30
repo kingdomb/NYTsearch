@@ -1,7 +1,7 @@
 $("button").on("click", function() {
-    var animal = $(this).attr("data-animal");
-    var queryURL = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=a357e4dc6ed94eccab93584c834596db" +
-      animal + "&api_key=dc6zaTOxFJmzC&limit=10";
+    event.preventDefault()
+    var searchTerm = $("#search-term").val();
+    var queryURL = "https://newsapi.org/v2/everything?q=" + searchTerm + "&apiKey=a357e4dc6ed94eccab93584c834596db&limit=10";
 
     $.ajax({
       url: queryURL,
@@ -11,6 +11,7 @@ $("button").on("click", function() {
       // Open up the data key, then open up the 0th, element. Study the keys and how the JSON is structured.
 
       console.log(response);
+      console.log(queryURL);
 
       // Step 2: since the image information is inside of the data key,
       // make a variable named results and set it equal to response.data
@@ -22,14 +23,14 @@ $("button").on("click", function() {
       // for (var i = 0; i < results.length; i++) {
 
       // Step 3: uncomment the for loop above and the closing curly bracket below.
-      // Make a div with jQuery and store it in a variable named animalDiv.
+      // Make a div with jQuery and store it in a variable named searchTermDiv.
       // Make a paragraph tag with jQuery and store it in a variable named p.
       // Set the inner text of the paragraph to the rating of the image in results[i].
-      // Make an image tag with jQuery and store it in a variable named animalImage.
+      // Make an image tag with jQuery and store it in a variable named searchTermImage.
       // Set the image's src to results[i]'s fixed_height.url.
-      // Append the p variable to the animalDiv variable.
-      // Append the animalImage variable to the animalDiv variable.
-      // Prepend the animalDiv variable to the element with an id of gifs-appear-here.
+      // Append the p variable to the searchTermDiv variable.
+      // Append the searchTermImage variable to the searchTermDiv variable.
+      // Prepend the searchTermDiv variable to the element with an id of gifs-appear-here.
 
       // ============= put step 3 in between these dashes ======================
 
